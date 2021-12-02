@@ -7,3 +7,6 @@ Feel free to pull down and edit this code :)
 
 Please contact Shi (or Josh if that's what he told you) if you want to test this code (or the one you edit) with the motor, driver
 and the arduino board.
+
+btw to edit or test this code you will need to install Arduino IDE on your laptop (install link https://www.arduino.cc/en/software,
+follow the instruction on that page and you will be alright)
