@@ -31,9 +31,12 @@
 // Pin definitions
 // for one driver and one motor
 const int EN1 = 2;
-const int DIR1 = 3;
 const int EN2 = 5;
+const int DIR1 = 3;
 const int DIR2 = 6;
+
+// Setting global variable
+boolean start = true;
 
 void setup() {
   
@@ -52,8 +55,7 @@ void setup() {
 
 void loop() {
   
-  // Parameter definitions
-  boolean start = true;
+  // Parameter definition
   boolean en    = true;
 
   // Activate the driver
@@ -64,13 +66,13 @@ void loop() {
     char dir = Serial.read();
     switch (dir){
       case 't':
-        if (start == true){
+        if (::start == true){
           pRev();
         }
         break;
 
       case 'f':
-        if (start == true){
+        if (::start == true){
           nRev();
         }
         break;
@@ -81,7 +83,6 @@ void loop() {
 
 void pRev(){ // p stands for positive
 
-  boolean start = true;
   int steps = 50;
   
   for (int i=0; i<steps; i++){
@@ -99,12 +100,11 @@ void pRev(){ // p stands for positive
     delay(3);
   }
 
-  start = false; // Motor stops after one revolution
+  ::start = false; // Motor stops after one revolution
 }
 
 void nRev(){ // n stands for negative
-
-  boolean start = true;
+  
   int steps = 50;
   
   for (int i=0; i<steps; i++){
@@ -122,5 +122,5 @@ void nRev(){ // n stands for negative
     delay(3);
   }
 
-  start = false; // Motor stops after one revolution
+  ::start = false; // Motor stops after one revolution
 }
