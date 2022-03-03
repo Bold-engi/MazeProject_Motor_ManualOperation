@@ -2,18 +2,6 @@
 
   MazeProject version v0.2.2
 
-  Contributors:
-    - Yumo Liu
-    - Shi Zhao
-
-  Updates on 2 Dec 2021:
-    - Fixed code errors in the beta version of the code, now motor will
-      work as expected.
-    - Simplified the monitor menu.
-    - Simplified the loop() function.
-    - Now motor will spin a full revolution in either clockwise or
-      anticlockwise directions.
-
   Project Description:
     This project allows user to control the rotation of a stepper motor.
     
